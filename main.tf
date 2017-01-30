@@ -25,7 +25,7 @@ resource "aws_elasticsearch_domain" "es" {
   }
 
   ebs_options {
-    ebs_enabled = "yes"
+    ebs_enabled = true
     volume_type = "gp2"
     volume_size = "${var.es_volume_size}"
   }

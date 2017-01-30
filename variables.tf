@@ -35,23 +35,35 @@ variable "es_instance_count" {
 
 variable "es_master_enabled" {
   description = "Enable ElasticSearch Dedicated Master Node"
-  default     = "no"
+  default     = false
 }
 
 variable "es_master_type" {
   description = "ElasticSearch Master Instance Type"
+  default     = "m3.large"
 }
 
 variable "es_master_count" {
   description = "ElasticSearch Master Node Count"
+  default     = "0"
 }
 
-variable "zone_awareness_enabled" {
+variable "es_zone_awareness_enabled" {
   description = "Enable Zone Awareness. Nodes must be EVEN number"
-  default     = "yes"
+  default     = true
 }
 
 variable "es_volume_size" {
   description = "ElasticSearch Volume Size Per Node. Max Size varies by Instance Type"
   default     = "200"
+}
+
+/*
+The variable below required escaped double quotes to render correctly as JSON object.
+Use JOIN function to supply a list IP Addresses.
+*/
+
+variable "ip_addresses" {
+  description = "List of IP Addresses"
+  default     = "\"127.0.0.1\""
 }
