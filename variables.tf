@@ -20,7 +20,7 @@ variable "es_domain_name" {
 
 variable "es_version" {
   description = "ElasticSearch Domain Version"
-  default     = "2.3"
+  default     = "5.1"
 }
 
 variable "es_instance_type" {
