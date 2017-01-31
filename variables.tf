@@ -40,7 +40,7 @@ variable "es_master_enabled" {
 
 variable "es_master_type" {
   description = "ElasticSearch Master Instance Type"
-  default     = "m3.large"
+  default     = "m3.large.elasticsearch"
 }
 
 variable "es_master_count" {
