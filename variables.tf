@@ -25,7 +25,7 @@ variable "es_version" {
 
 variable "es_instance_type" {
   description = "ElasticSearch Instance Type"
-  default     = "m3.large"
+  default     = "m3.large.elasticsearch"
 }
 
 variable "es_instance_count" {
