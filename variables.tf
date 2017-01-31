@@ -65,5 +65,8 @@ Use JOIN function to supply a list IP Addresses.
 
 variable "ip_addresses" {
   description = "List of IP Addresses"
-  default     = "\"127.0.0.1\""
+
+  default = [
+    "\"127.0.0.1\"",
+  ]
 }

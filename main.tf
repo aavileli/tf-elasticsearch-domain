@@ -6,7 +6,7 @@ data "template_file" "access_policies" {
   template = "${file("${path.module}/policies/elasticsearch-access-policy.tpl")}"
 
   vars {
-    IpAddresses = "${var.ip_addresses}"
+    IpAddresses = "${join(",", var.ip_addresses)}"
   }
 }
 
